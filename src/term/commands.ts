@@ -31,7 +31,7 @@ export class Commands {
         if(this.validCommands.indexOf(target) > -1){
             result = this.commands[target].execute(cmd.split(" "));
         }else{
-            result = `'${target}' is not recognized as an valid command.`;
+            result = `'${target}' is not recognized as a valid command.`;
         }
         this.history.push(cmd);
         this.history.reset();
