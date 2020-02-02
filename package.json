@@ -20,6 +20,7 @@
   "homepage": "https://github.com/i7az/i7az.github.io#readme",
   "devDependencies": {
     "@types/ejs": "^3.0.0",
+    "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.0",
     "@types/react-dom": "^16.9.5",
     "awesome-typescript-loader": "^5.2.1",

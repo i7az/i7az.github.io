@@ -4,6 +4,10 @@ import { FitAddon } from 'xterm-addon-fit';
 import { CommandHistory } from './history';
 import { Commands } from './commands';
 
+declare class Terminal {
+    constructor(opt: xterm.ITerminalOptions);
+};
+
 interface terminal {
     props: {
 
@@ -31,13 +35,13 @@ class terminal extends React.Component {
     componentDidMount(){
         if(!this.el) return;
         
-        this.terminal = new xterm({
+        this.terminal = new Terminal({
             allowTransparency:false,
             fontFamily: "'Press Start 2P', cursive",
             fontSize: 14,
             scrollback: 0,
             cursorBlink: true,
-        });
+        }) as xterm.Terminal;
         this.fitAddon = new FitAddon();
         this.terminal?.loadAddon(this.fitAddon);
         this.terminal!.open(this.el);

@@ -19,13 +19,13 @@ if (process.env.NODE_ENV === 'production') {
         new optimize.OccurrenceOrderPlugin()
     );
 }
-
+console.log(process.env.NODE_ENV === 'production')
 module.exports = {
     mode: process.env.NODE_ENV,
     entry: {
         index: './src/index.tsx',
     },
-    devtool: 'inline-source-map',
+    devtool: process.env.NODE_ENV === 'production' ? 'none' :'inline-source-map',
     module: {
         rules: [{
                 test: /\.tsx?$/,
