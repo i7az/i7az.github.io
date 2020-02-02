@@ -33,24 +33,26 @@ class terminal extends React.Component {
         this.commands = new Commands(this.history);
     }
     componentDidMount(){
-        if(!this.el) return;
+        setTimeout((()=>{
+            if(!this.el) return;
         
-        this.terminal = new Terminal({
-            allowTransparency:false,
-            fontFamily: "'Press Start 2P', cursive",
-            fontSize: 14,
-            scrollback: 0,
-            cursorBlink: true,
-        }) as xterm.Terminal;
-        this.fitAddon = new FitAddon();
-        this.terminal?.loadAddon(this.fitAddon);
-        this.terminal!.open(this.el);
-        this.fitAddon!.fit();
-        this.print_motd();
-        this.terminal!.onKey(this.handleKeyDown.bind(this));
-        this.terminal!.onResize(this.handleResize.bind(this));
-        this.prompt()
-        this.terminal!.focus();
+            this.terminal = new Terminal({
+                allowTransparency:false,
+                fontFamily: "'Press Start 2P', cursive",
+                fontSize: 14,
+                scrollback: 0,
+                cursorBlink: true,
+            }) as xterm.Terminal;
+            this.fitAddon = new FitAddon();
+            this.terminal?.loadAddon(this.fitAddon);
+            this.terminal!.open(this.el);
+            this.fitAddon!.fit();
+            this.print_motd();
+            this.terminal!.onKey(this.handleKeyDown.bind(this));
+            this.terminal!.onResize(this.handleResize.bind(this));
+            this.prompt()
+            this.terminal!.focus();
+        }).bind(this),500);
     }
     
     handleResize() {
