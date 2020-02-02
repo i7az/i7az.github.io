@@ -1,0 +1,16 @@
+body {
+  background: black;
+  font-family: 'Press Start 2P', cursive;
+  color: #4e9a06; }
+
+p {
+  margin: 0; }
+
+.title {
+  font: 48px/1.2 'Monoton', cursive; }
+
+.xterm .xterm-viewport {
+  overflow-y: hidden; }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSxpQkFBaUI7O0FBRWpCO0FBQ0EsWUFBWTs7QUFFWjtBQUNBLG9DQUFvQzs7QUFFcEM7QUFDQSxxQkFBcUIiLCJmaWxlIjoiaW5kZXguY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIGJhY2tncm91bmQ6IGJsYWNrO1xuICBmb250LWZhbWlseTogJ1ByZXNzIFN0YXJ0IDJQJywgY3Vyc2l2ZTtcbiAgY29sb3I6ICM0ZTlhMDY7IH1cblxucCB7XG4gIG1hcmdpbjogMDsgfVxuXG4udGl0bGUge1xuICBmb250OiA0OHB4LzEuMiAnTW9ub3RvbicsIGN1cnNpdmU7IH1cblxuLnh0ZXJtIC54dGVybS12aWV3cG9ydCB7XG4gIG92ZXJmbG93LXk6IGhpZGRlbjsgfVxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/
